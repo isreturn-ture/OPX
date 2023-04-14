@@ -8,10 +8,10 @@ export default function HomeMainFourView() {
   let [btcprice, setbtcprice] = React.useState<any>([]);
   let [btctime, setbtctime] = React.useState<any>([]);
   useEffect(() => {
-    axios.get("/api/news").then((res) => {
+    axios.get("https://opcoin.cn:6080/token/news").then((res) => {
       setnewstitle(res.data);
     });
-    axios.get("/api/btc").then((res) => {
+    axios.get("https://opcoin.cn:6080/token").then((res) => {
       let Kdata = [];
       let Time = [];
       for (let i = 4; i >= 0; i--) {

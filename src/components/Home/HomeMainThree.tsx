@@ -7,7 +7,7 @@ export default function Three() {
   const [data, setData] = React.useState<any>([]);
 
   useEffect(() => {
-    axios.get("/api/block").then((res) => {
+    axios.get("https://opcoin.cn:6080/token/bolck").then((res) => {
       setData(res.data.data);
     });
   }, []);
